@@ -4,6 +4,12 @@ name: CI/CD Pipeline for Docker Tag Push
   push:
     tags:
       - 'v*'
+      
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: whatsapp-api
